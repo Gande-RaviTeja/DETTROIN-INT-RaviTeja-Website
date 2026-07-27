@@ -27,21 +27,17 @@ export default function Pillars({ onSelectPillar }) {
                 onClick={() => onSelectPillar(card)}
                 className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center cursor-pointer group hover:-translate-y-1 relative overflow-hidden"
               >
-                {/* Subtle gold top border highlight on hover */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#D4AF37] to-[#0B2341] opacity-0 group-hover:opacity-100 transition-opacity" />
 
-                {/* Icon Badge */}
                 <div className="w-16 h-16 rounded-full bg-[#F8FAFC] border border-gray-200 flex items-center justify-center text-[#0B2341] group-hover:bg-[#0B2341] group-hover:text-[#D4AF37] group-hover:border-[#0B2341] transition-all duration-300 mb-6 shadow-inner">
                   <IconComp className="w-7 h-7 stroke-[1.5]" />
                 </div>
 
-                {/* Card Title */}
                 <h3 className="font-serif font-bold text-lg md:text-xl text-[#0B2341] mb-3 group-hover:text-[#D4AF37] transition-colors">
                   {card.title}
                 </h3>
 
-                {/* Card Description */}
-                <p className="text-gray-500 text-sm leading-relaxed font-light">
+                <p className="text-[#64748B] text-sm leading-relaxed font-light">
                   {card.description}
                 </p>
               </motion.div>

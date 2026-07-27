@@ -6,7 +6,6 @@ export default function InfrastructureSection({ onExploreInfrastructure }) {
     <section id="infrastructure" className="py-20 md:py-28 bg-white relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Left Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -35,7 +34,6 @@ export default function InfrastructureSection({ onExploreInfrastructure }) {
             </div>
           </motion.div>
 
-          {/* Right Slanted Image Container (matching Image 2 mockup) */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}

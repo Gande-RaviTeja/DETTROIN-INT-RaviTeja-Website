@@ -16,7 +16,6 @@ export default function Navbar({ onOpenLogin }) {
         setScrolled(false);
       }
 
-      // Track active section for highlight
       const sections = navLinks.map(link => link.href.substring(1));
       for (const section of sections) {
         const el = document.getElementById(section);
@@ -60,7 +59,6 @@ export default function Navbar({ onOpenLogin }) {
       }`}
     >
       <div className="max-w-[1400px] mx-auto px-4 md:px-8 flex items-center justify-between">
-        {/* Logo */}
         <a
           href="#hero"
           onClick={(e) => handleNavClick(e, '#hero')}
@@ -87,7 +85,6 @@ export default function Navbar({ onOpenLogin }) {
           </div>
         </a>
 
-        {/* Desktop Navigation Links */}
         <nav className="hidden xl:flex items-center gap-6 text-sm font-medium">
           {navLinks.map((link) => {
             const isActive = activeSection === link.href.substring(1);
@@ -119,7 +116,6 @@ export default function Navbar({ onOpenLogin }) {
           })}
         </nav>
 
-        {/* CTA Button */}
         <div className="hidden xl:flex items-center gap-4">
           <button
             onClick={onOpenLogin}
@@ -130,7 +126,6 @@ export default function Navbar({ onOpenLogin }) {
           </button>
         </div>
 
-        {/* Mobile Hamburger Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className={`xl:hidden p-2 rounded-lg transition-colors ${
@@ -142,7 +137,6 @@ export default function Navbar({ onOpenLogin }) {
         </button>
       </div>
 
-      {/* Mobile Drawer Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div

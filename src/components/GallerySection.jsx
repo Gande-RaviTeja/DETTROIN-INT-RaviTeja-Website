@@ -26,7 +26,6 @@ export default function GallerySection() {
             Glimpses of life, learning, and world-class infrastructure at Vasant Valley School.
           </p>
 
-          {/* Category Filter Pills */}
           <div className="flex flex-wrap justify-center gap-2 mt-8">
             {categories.map((cat) => (
               <button
@@ -44,7 +43,6 @@ export default function GallerySection() {
           </div>
         </div>
 
-        {/* Masonry / Grid Gallery */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredImages.map((img, idx) => (
             <motion.div
@@ -76,7 +74,6 @@ export default function GallerySection() {
         </div>
       </div>
 
-      {/* Lightbox Modal */}
       <AnimatePresence>
         {activeImage && (
           <motion.div

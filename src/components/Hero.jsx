@@ -13,7 +13,6 @@ const heroImages = [
 export default function Hero({ onOpenEnquire, onDiscoverClick }) {
   const [currentBgIndex, setCurrentBgIndex] = useState(0);
 
-  // Dynamic changing background every 5 seconds
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentBgIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
@@ -24,7 +23,6 @@ export default function Hero({ onOpenEnquire, onDiscoverClick }) {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden">
-      {/* Dynamic Background Image Slider (Changes every 5 seconds) */}
       <div className="absolute inset-0 z-0 overflow-hidden bg-[#071527]">
         <AnimatePresence mode="wait">
           <motion.img
@@ -39,31 +37,26 @@ export default function Hero({ onOpenEnquire, onDiscoverClick }) {
           />
         </AnimatePresence>
 
-        {/* Soft, Transparent Navy Gradient Overlays for High Photo Clarity */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0B2341]/90 via-[#0B2341]/45 to-transparent z-10" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B2341]/80 via-transparent to-black/30 z-10" />
       </div>
 
       <div className="relative z-20 max-w-[1400px] w-full mx-auto px-6 md:px-12 flex items-center justify-between">
-        {/* Left Aligned Hero Content Box */}
         <div className="max-w-2xl text-left text-white pt-10">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            {/* Big Uppercase Serif Heading Left Aligned */}
             <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight uppercase leading-[0.95] text-white drop-shadow-lg mb-6">
               IGNITING <br />
               <span className="text-white">EXCELLENCE</span>
             </h1>
 
-            {/* Subtitle Left Aligned */}
             <p className="text-base sm:text-lg md:text-xl text-gray-100 font-light leading-relaxed max-w-xl mb-10 border-l-2 border-[#D4AF37] pl-4 drop-shadow">
               Empowering learners to be compassionate, innovative and future-ready global citizens.
             </p>
 
-            {/* CTA Buttons */}
             <div className="flex flex-wrap items-center gap-4">
               <button
                 onClick={onDiscoverClick}
@@ -85,7 +78,6 @@ export default function Hero({ onOpenEnquire, onDiscoverClick }) {
           </motion.div>
         </div>
 
-        {/* Right side slide indicator pills (5 slides) */}
         <div className="hidden md:flex flex-col items-center gap-2 z-20">
           {heroImages.map((_, idx) => (
             <button
@@ -102,7 +94,6 @@ export default function Hero({ onOpenEnquire, onDiscoverClick }) {
         </div>
       </div>
 
-      {/* Animated Scroll Indicator */}
       <motion.a
         href="#about"
         initial={{ opacity: 0, y: -10 }}
