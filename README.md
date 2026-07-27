@@ -11,7 +11,7 @@ A modern, responsive, and interactive website redesign for **Vasant Valley Schoo
 - **Email Address**: ganderaviteja66@gmail.com
 - **GitHub Username**: [Gande-RaviTeja](https://github.com/Gande-RaviTeja)
 - **Selected Website**: Vasant Valley School (https://www.vasantvalley.org)
-- **Live Demo Link**: https://gande-raviteja.github.io/Gande-RaviTeja-DETTROIN-INT-RaviTeja-Website/
+- **Live Demo Link**: (https://grt-vasant-valley-redesign.vercel.app/)
 
 ---
 
